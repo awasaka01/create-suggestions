@@ -1,0 +1,98 @@
+@font-face {
+	font-family: mojangles;
+	src: url(./media/mojangles.ttf);
+}
+$fg-color-1: white;
+$fg-color-2: rgba(255, 255, 255, 0.557);
+
+body {
+	background-color: rgb(63, 63, 63);
+	font-family: mojangles;
+	color: $fg-color-1;
+	image-rendering: pixelated;
+
+	background-image: url(./media/bg.png);
+	background-repeat: repeat;
+	background-size: 2rem;
+
+	font-size: 1.5rem;
+}
+
+
+* {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+	border: none;
+}
+
+
+
+
+
+.suggestion {
+	padding: 30px;
+	flex-direction: row;
+	box-sizing: border-box;
+	width: 100%;
+
+	&, * { display: flex; }
+	.votes {
+		flex-direction: column;
+		margin-block: 0.4em;
+		font-size: 0.8em;
+
+		gap: 4px;
+		justify-content: center;
+
+		.thumbsup, .thumbsdown {
+			flex-direction: row;
+			justify-content: end;
+			align-items: center;
+		}
+	}
+
+	.content {
+		flex-direction: column;
+		flex-grow: 1;
+		background-color: #8b8b8b;
+		.text {
+			align-items: flex-end;
+			padding: 10px;
+
+		}
+
+		$border-width: 2px;
+		box-shadow: inset $border-width $border-width 0 0 #373737, inset 0-$border-width 0-$border-width 0 0 #ffffff;
+	
+
+
+		footer {
+			color: $fg-color-2;
+			font-size: 0.5em;
+			justify-content: flex-end;
+			align-items: flex-end;
+			padding: 4px 6px;
+			margin-top: auto;
+
+			a {
+				margin-right: auto;
+				color: inherit;
+				text-decoration: none;
+			}
+
+			p { white-space: pre; }
+		}
+	}
+}
+ 
+
+
+// p {
+	
+// 	border: 16px double orange;
+// 	border-image: url("border-brass.png") 16 16 16 16 repeat;
+// 	background-image: url("bg-brass.png");
+// 	background-size: 16px;
+// 	image-rendering: pixelated
+// }
